@@ -353,9 +353,9 @@ main{
     margin-bottom: 5px;
 }
 
-.ong-missao {
-    color: #c49109;
-    font-size: 0.95rem;
+.ong-status {
+    color: var(--h-color);
+    font-size: 1.1rem;
 }
 
 .ong-nome-text h2{
@@ -695,4 +695,36 @@ footer {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
+}
+
+.menu-toggle, .menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        gap: 16px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
 }
